@@ -30,13 +30,9 @@ end
   end
   
   def add_song(song)
-    if song.artist == self 
-    self.songs << song unless self.songs.include?(song) 
-  else 
-    song.artist = self 
-    self.songs << song unless self.songs.include?(song)
+    song.artist = self if song.artist != self
+    @songs << song unless @songs.include?(song)
   end
-end
 
   def genres
     songs.map { |song| song.genre }.uniq
