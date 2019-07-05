@@ -18,7 +18,7 @@ class MusicLibraryController
       puts "What would you like to do?"
 
       input = gets.chomp
-      case user_input  
+      case input  
         when 'list songs' 
           list_songs 
         when 'list artists'
