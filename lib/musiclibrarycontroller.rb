@@ -35,14 +35,14 @@ class MusicLibraryController
     end 
   end
 
-  def sort(klass, string)
+  def sort(klass)
     klass.all.sort_by { |i| i.name }.each.with_index(1) do |x, index|
-      puts string
-    end
   end
 
   def list_songs
-    sort(Song, "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
+    sort(Song).each.with_index(1) do |song, index|
+      puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
   end
 
   def list_artists
