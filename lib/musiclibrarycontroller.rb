@@ -35,6 +35,8 @@ class MusicLibraryController
     end 
   end
 
+  def sort(klass, item)
+    
   def list_songs
     sorted_songs = Song.all.sort_by { |song| song.name }
     sorted_songs.each.with_index(1) do |song, index|
