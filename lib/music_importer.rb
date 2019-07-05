@@ -6,7 +6,7 @@ class MusicImporter
   end
 
   def files
-    Dir.entries(@path).select! { |file| file.include?('mp3') }
+    Dir.glob("#{path}/*").map{|file| file.gsub("#{path}/", '')}
   end
   
   def import
