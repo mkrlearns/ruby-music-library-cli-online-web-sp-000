@@ -41,19 +41,15 @@ class MusicLibraryController
   end
 
   def list_songs
-    sort(Song, "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
+    list_items(Song, "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
   end
 
   def list_artists
-    sort(Artist).each.with_index(1) do |artist, index|
-      puts "#{index}. #{artist.name}"
-    end
+    list_items(Artist, "#{index}. #{artist.name}")
   end
 
   def list_genres
-    sort(Genre).each.with_index(1) do |genre, index|
-      puts "#{index}. #{genre.name}"
-    end
+    list_items(Genre, "#{index}. #{genre.name}")
   end
 
   # def list_songs_by_artist
@@ -69,17 +65,17 @@ class MusicLibraryController
   #   end
   # end
 
-  def list_artists
-    sorted_artists = Artist.all.sort_by { |artist| artist.name }
-    sorted_artists.each.with_index(1) do |artist, index|
-      puts "#{index}. #{artist.name}"
-    end
-  end
+  # def list_artists
+  #   sorted_artists = Artist.all.sort_by { |artist| artist.name }
+  #   sorted_artists.each.with_index(1) do |artist, index|
+  #     puts "#{index}. #{artist.name}"
+  #   end
+  # end
 
-  def list_genres
-    sorted_genres = Genre.all.sort_by { |genre| genre.name }
-    sorted_genres.each.with_index(1) do |genre, index|
-      puts "#{index}. #{genre.name}"
-    end
-  end
+  # def list_genres
+  #   sorted_genres = Genre.all.sort_by { |genre| genre.name }
+  #   sorted_genres.each.with_index(1) do |genre, index|
+  #     puts "#{index}. #{genre.name}"
+  #   end
+  # end
 end
