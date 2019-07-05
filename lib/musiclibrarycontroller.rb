@@ -36,22 +36,22 @@ class MusicLibraryController
   end
 
   def list_songs
-    sorted_genres = Song.all.sort_by { |song| song.name }
-    sorted.each.with_index(1) do |song, index|
+    sorted_songs = Song.all.sort_by { |song| song.name }
+    sorted_songs.each.with_index(1) do |song, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
 
   def list_artists
-    sorted = Artist.all.sort_by { |artist| artist.name }
-    sorted.each.with_index(1) do |artist, index|
+    sorted_artists = Artist.all.sort_by { |artist| artist.name }
+    sorted_artists.each.with_index(1) do |artist, index|
       puts "#{index}. #{artist.name}"
     end
   end
 
   def list_genres
-    sorted = Genre.all.sort_by { |genre| genre.name }
-    sorted.each.with_index(1) do |genre, index|
+    sorted_genres = Genre.all.sort_by { |genre| genre.name }
+    sorted_genres.each.with_index(1) do |genre, index|
       puts "#{index}. #{genre.name}"
     end
   end
