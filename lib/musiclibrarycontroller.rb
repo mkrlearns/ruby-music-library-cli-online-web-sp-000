@@ -62,12 +62,12 @@ class MusicLibraryController
   #   if artist = Artist.find_by_name(input)
   #     sorted_songs = artist.songs.sort_by { |song| song.name }
 
-  # def list_songs
-  #   # sorted_songs = Song.all.sort_by { |song| song.name }
-  #   sort(Song).each.with_index(1) do |song, index|
-  #     puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-  #   end
-  # end
+  def list_songs
+    # sorted_songs = Song.all.sort_by { |song| song.name }
+    sort(Song).each.with_index(1) do |song, index|
+      puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
+  end
 
   def list_artists
     sorted_artists = Artist.all.sort_by { |artist| artist.name }
