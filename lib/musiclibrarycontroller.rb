@@ -51,11 +51,11 @@ class MusicLibraryController
     end
   end
 
-  # def list_genres
-  #   sort(Genre).each.with_index(1) do |genre, index|
-  #     puts "#{index}. #{genre.name}"
-  #   end
-  # end
+  def list_genres
+    sort(Genre).each.with_index(1) do |genre, index|
+      puts "#{index}. #{genre.name}"
+    end
+  end
 
   # def list_songs_by_artist
   #   puts "Please, enter the name of an artist:"
