@@ -39,12 +39,7 @@ end
 end
 
   def genres
-    @genres = []
-    self.songs.collect do |song| 
-    @genres << song.genre unless @genres.include?(song.genre)
+    songs.map { |song| song.genre }.uniq
   end 
-  @genres
-  end
-
 
 end
