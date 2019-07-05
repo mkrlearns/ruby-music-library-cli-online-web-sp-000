@@ -40,9 +40,9 @@ class MusicLibraryController
     sorted.each.with_index(1) { |x, index| puts string }
   end
 
-  def list_songs
-    sort(Song, "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
-  end
+  # def list_songs
+  #   sort(Song, "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
+  # end
 
   # def list_artists
   #   sort(Artist).each.with_index(1) do |artist, index|
