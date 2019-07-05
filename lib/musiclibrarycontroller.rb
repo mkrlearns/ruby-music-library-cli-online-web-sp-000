@@ -35,8 +35,10 @@ class MusicLibraryController
     end 
   end
 
-  def sort(klass)
-    sorted = klass.all.sort_by { |i| i.name }
+  def sort(klass, string)
+    klass.all.sort_by { |i| i.name }.each.with_index(1) do |x, index|
+      puts string
+    end
   end
 
   def list_songs
