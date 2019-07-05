@@ -20,9 +20,8 @@ class Artist
     @@all << self 
   end
   
-  def self.create(thing)
-    self.new(thing).tap do |artist|
-    artist.save
+  def self.create(name)
+    self.new(name).tap { |artist| artist.save }
   end
 end
  
@@ -39,13 +38,13 @@ end
   end
 end
 
-def genres
-  @genres = []
-  self.songs.collect do |song| 
-  @genres << song.genre unless @genres.include?(song.genre)
-end 
-@genres
-end
+  def genres
+    @genres = []
+    self.songs.collect do |song| 
+    @genres << song.genre unless @genres.include?(song.genre)
+  end 
+  @genres
+  end
 
 
 end
