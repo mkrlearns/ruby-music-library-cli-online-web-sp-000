@@ -17,7 +17,7 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
 
-      user_input = gets 
+      input = gets.chomp
       case user_input  
         when 'list songs' 
           list_songs 
