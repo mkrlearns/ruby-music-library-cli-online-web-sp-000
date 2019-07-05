@@ -25,17 +25,6 @@ class Genre
     self.new(name).tap { |genre| genre.save }
   end
 
-  def songs
-    @songs
-  end 
-
-def artists
-  @artists = []
-  self.songs.collect do |song|
-    @artists << song.artist unless @artists.include?(song.artist)
-end
-@artists
-end
 
   
 end
